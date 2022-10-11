@@ -26,7 +26,7 @@ main {
     height: calc(100vh - 20px);
 }
 
-#container {
+.card-container {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -34,56 +34,57 @@ main {
     width: 700px;
     height: 525px;
     border-radius: 8px;
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
-#perfume-img {
-    object-fit: cover;
+.perfume-img {
     width: 100%;
     border-radius: 8px 0 0 8px;
 }
 
-#text-container {
+.text-container {
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-#perfume {
+.perfume {
     letter-spacing: 0.3rem;
 }
 
-h1, h2 {
+h1, .discount-price {
     font-family: 'Fraunces', serif;
     font-size: 2.5rem;
     line-height: 1;
     color: var(--very-dark-blue);
 }
 
-p:not(button p) {
+p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
     color: var(--dark-grayish-blue);
 }
 
-#price-container {
+.price-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
 }
 
-#discount-price {
+.discount-price {
     color: var(--dark-cyan);
 }
 
-#base-price {
+.base-price {
     text-decoration: line-through;
 }
 
 button {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     background-color: var(--dark-cyan);
     border: 0px solid black;
     color: var(--white);
@@ -92,9 +93,15 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
+    transition: background-color 0.5s ease;
 }
 
-#cart-icon {
+button:hover {
+    background-color: hsl(158, 35%, 27%);
+    cursor: pointer;
+}
+
+.cart-icon {
     width: 1rem;
     margin-right: 0.5rem;
 }
@@ -104,20 +111,24 @@ button {
         font-size: 12px;
     }
 
-    #container {
+    .card-container {
         grid-template-columns: 1fr;
         grid-template-rows: 40% 60%;
         width: 330px;
         height: 600px;
     }
     
-    #perfume-img {
+    .perfume-img {
         height: 100%;
         border-radius: 8px 8px 0 0;
     }
     
-    #price-container {
+    .price-container {
        width: 70%;
+    }
+
+    button {
+        height: 3.5rem;
     }
    
 }

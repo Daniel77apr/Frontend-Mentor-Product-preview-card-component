@@ -20,26 +20,32 @@
 </head>
 <body>
   <main>
-    <div id="container">
-      <img id="perfume-img" src="images/image-product-desktop.jpg" alt="Chanel perfume bottle">
-      <div id="text-container">
-        <p id="perfume">PERFUME</p>
+    <div class="card-container">
+      <picture>
+        <source media="(min-width: 740px)" srcset="images/image-product-desktop.jpg">
+        <img class="perfume-img" src="images/image-product-mobile.jpg" alt="Photo of a bottle of Gabrielle Chanel Paris perfume">
+      </picture>
+      
+      <div class="text-container">
+        <p class="perfume">PERFUME</p>
         <h1>Gabrielle Essence Eau De Parfum</h1>
         <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
-        <div id="price-container">
-          <h2 id="discount-price">$149.99</h2>
-          <p id="base-price">$169.99</p>
+        <div class="price-container">
+          <p class="discount-price">$149.99</p>
+          <p class="base-price">$169.99</p>
         </div>
         <button>
-          <img id="cart-icon" src="images/icon-cart.svg">
-          <p>Add to Cart<p>
+          <img class="cart-icon" src="images/icon-cart.svg" alt="cart icon">
+          Add to Cart
         </button>
       </div>
     </div>
-  </main>  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/Daniel77apr" target="_blank">Daniel Perez Romo</a>.
-  </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/Daniel77apr" target="_blank">Daniel Perez Romo</a>.
+    </div>  
+  </footer>  
 </body>
 </html>
