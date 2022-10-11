@@ -113,10 +113,11 @@ button {
     
     #perfume-img {
         height: 100%;
-        /*width: 90vw;*/
         border-radius: 8px 8px 0 0;
     }
-
+    
+    #price-container {
+       width: 70%;
+    }
    
-
 }
