@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+
+:root {
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--cream);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 20px);
+}
+
+#container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--white);
+    width: 700px;
+    height: 525px;
+    border-radius: 8px;
+}
+
+#perfume-img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px 0 0 8px;
+}
+
+#text-container {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#perfume {
+    letter-spacing: 0.3rem;
+}
+
+h1, h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--very-dark-blue);
+}
+
+p:not(button p) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--dark-grayish-blue);
+}
+
+#price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+#discount-price {
+    color: var(--dark-cyan);
+}
+
+#base-price {
+    text-decoration: line-through;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-cyan);
+    border: 0px solid black;
+    color: var(--white);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#cart-icon {
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 740px) {
+    html {
+        font-size: 12px;
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 60%;
+        width: 330px;
+        height: 600px;
+    }
+    
+    #perfume-img {
+        height: 100%;
+        /*width: 90vw;*/
+        border-radius: 8px 8px 0 0;
+    }
+
+   
+
+}
